@@ -81,6 +81,7 @@ ro.enable_boot_charger_mode=1
 
 # Media
 drm.service.enabled=1
+vendor.mediacodec.binder.size=6
 vidc.enc.narrow.searchrange=1
 
 # NITZ
@@ -150,6 +151,7 @@ ro.telephony.call_ring.multiple=false
 
 # Sensors
 ro.fusion.magfield.max=250
+persist.vendor.sensor.hw.binder.size=8
 
 # Touch response
 persist.vendor.qti.inputopts.enable=true
