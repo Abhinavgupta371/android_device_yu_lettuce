@@ -1,4 +1,4 @@
-sh device/yu/lettuce/patches/apply.sh
+#sh device/yu/lettuce/patches/apply.sh
 croot
 
 export TARGET_USE_SDCLANG=true
