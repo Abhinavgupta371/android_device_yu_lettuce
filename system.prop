@@ -86,6 +86,7 @@ ro.enable_boot_charger_mode=1
 
 # Media
 drm.service.enabled=1
+mm.enable.sec.smoothstreaming=true
 vendor.mediacodec.binder.size=6
 vidc.enc.narrow.searchrange=1
 
