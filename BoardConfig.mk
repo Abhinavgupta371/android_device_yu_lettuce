@@ -187,6 +187,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 DISABLE_RILD_OEM_HOOK := false
 MALLOC_SVELTE := true
 TARGET_RIL_VARIANT := caf
+TARGET_USE_OLD_MNC_FORMAT := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
