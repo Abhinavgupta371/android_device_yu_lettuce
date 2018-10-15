@@ -29,6 +29,24 @@ sys.vendor.shutdown.waittime=500
 persist.camera.cpp.duplication=false
 persist.camera.hal.debug.mask=0
 
+# Cloudflare DNS
+net.dns1=1.1.1.1
+net.dns2=1.0.0.1
+net.rmnet0.dns1=1.1.1.1
+net.rmnet0.dns2=1.0.0.1
+net.gprs.dns1=1.1.1.1
+net.gprs.dns2=1.0.0.1
+net.ppp0.dns1=1.1.1.1
+net.ppp0.dns2=1.0.0.1
+net.wlan0.dns1=1.1.1.1
+net.wlan0.dns2=1.0.0.1
+net.eth0.dns1=1.1.1.1
+net.eth0.dns2=1.0.0.1
+dhcp.eth0.dns1=1.1.1.1
+dhcp.eth0.dns2=1.0.0.1
+dhcp.wlan0.dns1=1.1.1.1
+dhcp.wlan0.dns2=1.0.0.1
+
 # Dalvik
 dalvik.vm.checkjni=false
 dalvik.vm.verify-bytecode=false
@@ -55,24 +73,6 @@ ro.sf.lcd_density=320
 # Fling velocities
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
-
-# Google DNS
-net.dns1=1.1.1.1
-net.dns2=1.0.0.1
-net.rmnet0.dns1=1.1.1.1
-net.rmnet0.dns2=1.0.0.1
-net.gprs.dns1=1.1.1.1
-net.gprs.dns2=1.0.0.1
-net.ppp0.dns1=1.1.1.1
-net.ppp0.dns2=1.0.0.1
-net.wlan0.dns1=1.1.1.1
-net.wlan0.dns2=1.0.0.1
-net.eth0.dns1=1.1.1.1
-net.eth0.dns2=1.0.0.1
-dhcp.eth0.dns1=1.1.1.1
-dhcp.eth0.dns2=1.0.0.1
-dhcp.wlan0.dns1=1.1.1.1
-dhcp.wlan0.dns2=1.0.0.1
 
 # Healthd
 ro.enable_boot_charger_mode=1
@@ -121,14 +121,6 @@ ro.min_freq_0=200000
 ro.min_freq_1=200000
 ro.min_freq_2=200000
 ro.min_freq_3=200000
-ro.sys.fw.bservice_enable=true
-ro.sys.fw.bservice_limit=5
-ro.sys.fw.bservice_age=5000
-ro.sys.fw.use_trim_settings=true
-ro.sys.fw.empty_app_percent=50
-ro.sys.fw.trim_empty_percent=100
-ro.sys.fw.trim_cache_percent=100
-ro.sys.fw.trim_enable_memory=1073741824
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.qti.am.reschedule_service=true
 ro.vendor.qti.core_ctl_min_cpu=0

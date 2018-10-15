@@ -23,8 +23,11 @@ TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 TARGET_NO_BOOTLOADER := true
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
 # Architecture
-ifneq ($(FORCE_32_BIT),true)
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
@@ -36,15 +39,6 @@ TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
-else
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := cortex-a53
-
-TARGET_USES_64_BIT_BINDER := true
-endif
 
 # Audio
 AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
@@ -59,13 +53,16 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Boot animation
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 # Camera
-BOARD_CAMERA_SENSORS := ov5670_q5v41b ov8865_q8v18a
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 	/system/bin/mediaserver=23 \
@@ -128,10 +125,6 @@ TARGET_USES_MKE2FS := true
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true
-TARGET_QCOM_NO_FM_FIRMWARE := true
-
-# Framework sched boost
-ENABLE_SCHED_BOOST := true
 
 # GPS
 TARGET_NO_RPC := true
@@ -173,6 +166,10 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
+PRODUCT_ENFORCE_RRO_TARGETS := framework-res
+
 # Power
 TARGET_HAS_NO_POWER_STATS := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc.0/78b9000.i2c/i2c-5/5-0040/double_tap_enable"
@@ -195,7 +192,6 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cm
 
 # Releasetools
 TARGET_DISABLE_OTA_ASSERT := true
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
@@ -208,17 +204,13 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libflp.so|libshims_flp.so \
     /system/vendor/lib/libizat_core.so|libshims_get_process_name.so
 
+# Shipping API level (L-MR1)
+PRODUCT_SHIPPING_API_LEVEL := 22
+
 # TWRP
 ifeq ($(WITH_TWRP),true)
 include $(DEVICE_PATH)/twrp.mk
 endif
-
-# Use Snapdragon LLVM, if available
-TARGET_USE_SDCLANG := true
-
-# Widevine
-BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
-
 
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true

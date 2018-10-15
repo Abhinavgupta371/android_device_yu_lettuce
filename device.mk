@@ -15,14 +15,6 @@
 # limitations under the License.
 #
 
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-PRODUCT_ENFORCE_RRO_TARGETS := framework-res
-
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -62,10 +54,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0-service
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8916 \
@@ -93,10 +81,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
-
-# Doze
-#PRODUCT_PACKAGES += \
-#    YUDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -163,10 +147,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/qpnp_pon.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/qpnp_pon.kl
 
 # Keymaster
-ifneq ($(TARGET_PROVIDES_KEYMASTER),true)
 PRODUCT_PACKAGES += \
     keystore.msm8916
-endif
 
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
