@@ -1,9 +1,10 @@
 croot
 
-export TARGET_USE_SDCLANG=true
-export SDCLANG_FLAGS="-O3 -fvectorize -Wno-vectorizer-no-neon -Wno-user-defined-warnings"
-export SDCLANG_FLAGS_2="-O3 -fvectorize -Wno-vectorizer-no-neon -Wno-user-defined-warnings"
-export SDCLANG_COMMON_FLAGS="-O3 -fvectorize -Wno-vectorizer-no-neon -Wno-user-defined-warnings"
+export TARGET_USE_SDCLANG=false
+export SDCLANG=false
+#export SDCLANG_FLAGS="-O3 -fvectorize -Wno-vectorizer-no-neon -Wno-user-defined-warnings"
+#export SDCLANG_FLAGS_2="-O3 -fvectorize -Wno-vectorizer-no-neon -Wno-user-defined-warnings"
+#export SDCLANG_COMMON_FLAGS="-O3 -fvectorize -Wno-vectorizer-no-neon -Wno-user-defined-warnings"
 
 GCC_7_DIR=prebuilts/gcc/linux-x86/aarch64/aarch64-opt-linux-android
 GCC_7_LINK="https://github.com/krasCGQ/aarch64-linux-android/"

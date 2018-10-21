@@ -193,6 +193,10 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cm
 # Releasetools
 TARGET_DISABLE_OTA_ASSERT := true
 
+# SDClang
+TARGET_USE_SDCLANG := false
+SDCLANG := false
+
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
