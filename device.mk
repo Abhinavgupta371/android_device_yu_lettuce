@@ -294,7 +294,7 @@ PRODUCT_BOOT_JARS += telephony-ext
 
 # USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.cyanogen_8916
+    android.hardware.usb@1.0-service.lettuce
 
 # USB ID
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

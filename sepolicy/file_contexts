@@ -2,7 +2,6 @@
 /sys/devices/soc\.0/gpio-leds\.[a-z0-9]+/leds(/.*)?                       u:object_r:sysfs_leds:s0
 /sys/devices/soc\.0/qcom,camera-led-flash\.[a-z0-9]+/leds(/.*)?           u:object_r:sysfs_leds:s0
 /sys/devices/soc\.0/[a-z0-9]+\.i2c/i2c-[0-9]/[0-9]-[a-z0-9]+/leds(/.*)?   u:object_r:sysfs_leds:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.lettuce u:object_r:hal_light_default_exec:s0
 
 # Persist
 /dev/block/platform/soc\.0/7824900\.sdhci/by-name/persist                 u:object_r:persist_block_device:s0
@@ -19,4 +18,4 @@
 /sys/devices/soc\.0/78b9000\.i2c/i2c-5/5-0040(/.*)?                       u:object_r:touchpanel_sysfs:s0
 
 # HALs
-/system/vendor/bin/hw/android\.hardware\.usb@1\.0-service\.cyanogen_8916  u:object_r:hal_usb_default_exec:s0
+/system/vendor/bin/hw/android\.hardware\.usb@1\.0-service\.lettuce	  u:object_r:hal_usb_default_exec:s0
