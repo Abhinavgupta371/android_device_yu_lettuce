@@ -362,6 +362,7 @@ service perfd /vendor/bin/perfd
     group root readproc system
     socket perfd seqpacket 0666 root system
     writepid /dev/cpuset/system-background/tasks
+    disabled
 
 service time_daemon /system/vendor/bin/time_daemon
     class late_start
