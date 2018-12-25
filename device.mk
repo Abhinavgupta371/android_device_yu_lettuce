@@ -72,6 +72,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Display
 PRODUCT_PACKAGES += \
+    copybit.msm8916 \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
     libgenlock \
