@@ -132,17 +132,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc \
-    init.qcom.devstart.sh \
-    init.qcom.devwait.sh \
     init.qcom.rc \
-    init.qcom.mem.sh \
     init.qcom.power.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.qcom.bt.sh
+    init.qcom.bt.sh \
+    init.qcom.devstart.sh \
+    init.qcom.devwait.sh \
+    init.qcom.mem.sh
 
 # IRSC
 PRODUCT_COPY_FILES += \
