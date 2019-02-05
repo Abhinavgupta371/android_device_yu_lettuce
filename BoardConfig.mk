@@ -218,11 +218,6 @@ TARGET_LD_SHIM_LIBS := \
 # Shipping API level (L-MR1)
 PRODUCT_SHIPPING_API_LEVEL := 22
 
-# TWRP
-ifeq ($(WITH_TWRP),true)
-include $(DEVICE_PATH)/twrp.mk
-endif
-
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HOSTAPD_DRIVER := NL80211
