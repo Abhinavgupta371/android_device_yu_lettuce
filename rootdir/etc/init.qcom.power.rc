@@ -91,6 +91,8 @@ on enable-low-power
     write /sys/module/wakeup/parameters/enable_wlan_pno_wl_ws 0
     write /sys/module/wakeup/parameters/enable_wcnss_filter_lock_ws 0
     
+    setprop vendor.post_boot.parsed 1
+
     rm /data/system/perfd/default_values
     start perfd
 
