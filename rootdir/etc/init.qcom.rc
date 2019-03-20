@@ -217,6 +217,7 @@ service rmt_storage /system/vendor/bin/rmt_storage
 service tftp_server /system/vendor/bin/tftp_server
    class main
    user root
+   group root system
 
 service hciattach /system/vendor/bin/init.qcom.bt.sh
     class late_start
