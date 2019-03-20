@@ -69,17 +69,6 @@ on post-fs-data
 
     mkdir /data/misc/ipa 0700 net_admin net_admin
 
-    # Create the directories used by CnE subsystem
-    mkdir /data/connectivity 0771 system system
-    chown system system /data/connectivity
-
-    # Create the directories used by DPM subsystem
-    mkdir /data/dpm 0771 system system
-    chown system system /data/dpm
-
-    mkdir /data/dpm/nsrm 0771 system system
-    chown system system /data/dpm/nsrm
-
     # Mark the copy complete flag to not completed
     write /data/misc/radio/copy_complete 0
     chown radio radio /data/misc/radio/copy_complete
@@ -119,18 +108,8 @@ on post-fs-data
     # Ensure .bt_nv.bin is owned by bluetooth
     chown bluetooth bluetooth /persist/.bt_nv.bin
 
-    # Create directory for IMS services
-    mkdir /data/shared 0755
-    chown system system /data/shared
-
     # Create /data/time folder for time-services
     mkdir /data/time 0700 system system
-
-    # Tombstones
-    mkdir /data/tombstones/modem 0771 system system
-    mkdir /data/tombstones/lpass 0771 system system
-    mkdir /data/tombstones/wcnss 0771 system system
-    mkdir /data/tombstones/dsps 0771 system system
 
     setprop vold.post_fs_data_done 1
 
