@@ -191,8 +191,10 @@ TARGET_USE_SDCLANG := false
 SDCLANG := false
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+#include device/qcom/sepolicy-legacy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += \
+#    $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += device/yu/lettuce/sepolicy_q
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
