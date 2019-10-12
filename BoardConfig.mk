@@ -178,9 +178,6 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := framework-res
 
-# Peripheral manager
-TARGET_PER_MGR_ENABLED := true
-
 # Power
 TARGET_HAS_NO_POWER_STATS := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc.0/78b9000.i2c/i2c-5/5-0040/double_tap_enable"
@@ -213,6 +210,9 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
+    /system/vendor/lib64/lib-imscamera.so|libshims_camera.so \
+    /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
     /system/vendor/lib64/libflp.so|libshims_flp.so \
     /system/vendor/lib64/libizat_core.so|libshims_get_process_name.so \
     /system/vendor/lib/libflp.so|libshims_flp.so \
