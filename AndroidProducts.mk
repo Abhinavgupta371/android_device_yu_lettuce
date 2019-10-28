@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_lettuce.mk
+    $(LOCAL_DIR)/aosip_lettuce.mk
