@@ -39,21 +39,9 @@ on early-init
 on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
-    mount_all /vendor/etc/fstab.qcom --early
 
+    mount_all /vendor/etc/fstab.qcom
     restorecon_recursive /persist
-
-    # Start HW service manager early
-    start hwservicemanager
-
-on late-fs
-    # Start services for bootanim
-    start surfaceflinger
-    start bootanim
-    start configstore-hal-1-0
-    start gralloc-2-0
-
-    mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs
     # Start devices by sysfs trigger
