@@ -42,3 +42,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=YUPHORIA
 
 BUILD_FINGERPRINT := YU/YUPHORIA/YUPHORIA:5.1.1/LMY49J/YOG4PAS8A8:user/release-keys
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+    ro.system.build.fingerprint=$(BUILD_FINGERPRINT)
+    ro.vendor.build.fingerprint=$(BUILD_FINGERPRINT)
