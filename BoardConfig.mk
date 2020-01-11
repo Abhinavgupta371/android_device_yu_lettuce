@@ -155,7 +155,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET := 0x02000000
 LZMA_RAMDISK_TARGETS := recovery
 
-TARGET_KERNEL_CONFIG := reborn_lettuce_defconfig
+TARGET_KERNEL_CONFIG := lineageos_lettuce_defconfig
 TARGET_KERNEL_SOURCE := kernel/cyanogen/msm8916
 
 # Lights
